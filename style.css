@@ -440,7 +440,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .mobile-nav.open {
@@ -448,12 +448,16 @@ p {
 }
 
 .mobile-nav a {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-family: var(--font-body);
+  /* Use body font for cleaner look */
+  font-size: 1.5rem;
+  /* Slightly smaller for cleaner list */
   color: var(--color-ivory);
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: var(--transition);
+  text-transform: none;
+  /* Remove uppercase if present elsewhere */
 }
 
 .mobile-nav a:hover {
@@ -462,13 +466,27 @@ p {
 
 .mobile-lang-switcher {
   display: flex;
-  gap: 12px;
-  margin-top: 1rem;
+  gap: 15px;
+  margin-top: 2rem;
 }
 
 .mobile-lang-switcher .lang-btn {
-  font-size: 0.85rem;
-  padding: 6px 12px;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--color-ivory);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.mobile-lang-switcher .lang-btn.active {
+  opacity: 1;
+  background: rgba(255, 215, 0, 0.15);
+  /* Subtle gold background */
+  color: var(--color-gold);
 }
 
 /* ---------- Hero Section ---------- */
