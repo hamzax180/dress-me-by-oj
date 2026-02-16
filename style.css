@@ -565,7 +565,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     /* Align to top instead of center to control spacing better */
-    padding-top: 80px;
+    padding-top: 120px;
     /* Add padding for fixed header */
     gap: 2rem;
   }
@@ -2014,7 +2014,8 @@ p {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 70px;
+    --header-height: 100px;
+    /* Increased to fit 100px logo */
   }
 
   .nav-links,
