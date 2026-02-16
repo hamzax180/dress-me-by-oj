@@ -3,14 +3,6 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/backend/:path*",
-      "destination": "/backend/:path*"
-    },
-    {
-      "source": "/frontend/:path*",
-      "destination": "/frontend/:path*"
-    },
-    {
       "source": "/",
       "destination": "/frontend/index.html"
     },
