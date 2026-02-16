@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery – Dress Me by Oj</title>
+    <title>Blog & News – Dress Me by Oj</title>
     <meta name="description"
-        content="Browse our fashion gallery showcasing the latest collections, lookbooks, and behind-the-scenes from Dress Me by Oj.">
+        content="Stay updated with the latest fashion news, trends, and stories from Dress Me by Oj.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
@@ -18,11 +18,11 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+                <img src="model photos/logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
             </a>
             <nav class="nav-links" id="navLinks">
                 <a href="./">Home</a><a href="about">About</a><a href="products">Products</a>
-                <a href="gallery" class="active">Gallery</a><a href="blog">Blog</a><a href="contact">Contact</a>
+                <a href="gallery">Gallery</a><a href="blog" class="active">Blog</a><a href="contact">Contact</a>
             </nav>
             <div class="lang-switcher" id="langSwitcher">
                 <button class="lang-btn active" data-lang="en">EN</button>
@@ -45,68 +45,45 @@
     <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="container">
-            <h1 data-i18n="page_gallery_title">GALLERY</h1>
+            <h1 data-i18n="page_blog_title">LATEST NEWS</h1>
             <div class="breadcrumb">
-                <a href="./">Home</a><span>/</span><span>Visuals</span>
+                <a href="./">Home</a><span>/</span><span>Blog</span>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- BLOG POSTS -->
     <section class="section">
         <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label" style="justify-content:center;" data-i18n="lookbook_label">Lookbook</span>
-                <h2 class="section-title" data-i18n="lookbook_title">Explore Our Collections</h2>
-                <p class="section-subtitle" style="margin:0 auto;" data-i18n="lookbook_subtitle">A curated visual
-                    journey through our latest designs, runway shows, and behind-the-scenes moments.</p>
-            </div>
-            <!-- Gallery Grid -->
-            <div class="gallery-grid reveal">
-                <!-- Image 1 -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_cwx34scwx34scwx3.png" alt="Model Collection 1">
-                    <div class="gallery-item-overlay"><span>+</span></div>
+            <div class="blog-grid">
+
+                <!-- News Coming Soon -->
+                <div class="no-news-message" style="grid-column: 1 / -1; text-align: center; padding: 4rem 0;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem;">Coming Soon</h3>
+                    <p>We are working on exciting updates. Check back later for the latest news and fashion insights.
+                    </p>
                 </div>
-                <!-- Image 2 -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_pyotw0pyotw0pyot.png" alt="Model Collection 2">
-                    <div class="gallery-item-overlay"><span>+</span></div>
-                </div>
-                <!-- Image 3 (Copy) -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_pyotw0pyotw0pyot%20-%20Copy.png"
-                        alt="Model Collection 3">
-                    <div class="gallery-item-overlay"><span>+</span></div>
-                </div>
-                <!-- Image 4 (Copy 2) -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_pyotw0pyotw0pyot%20-%20Copy%20(2).png"
-                        alt="Model Collection 4">
-                    <div class="gallery-item-overlay"><span>+</span></div>
-                </div>
-                <!-- Image 5 (Copy 3) -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_pyotw0pyotw0pyot%20-%20Copy%20(3).png"
-                        alt="Model Collection 5">
-                    <div class="gallery-item-overlay"><span>+</span></div>
-                </div>
-                <!-- Image 6 -->
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="model%20photos/Gemini_Generated_Image_s1y7e7s1y7e7s1y7.png" alt="Model Collection 6">
-                    <div class="gallery-item-overlay"><span>+</span></div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- NEWSLETTER -->
     <section class="cta-banner">
         <div class="container">
-            <h2 class="reveal" data-i18n="gallery_cta_title">Want to See More?</h2>
-            <p class="reveal reveal-delay-1" data-i18n="gallery_cta_desc">Follow us for daily fashion inspiration and
-                exclusive behind-the-scenes content.</p>
-            <a href="contact" class="btn btn-white reveal reveal-delay-2" data-i18n="cta_btn">Get in Touch</a>
+            <h2 class="reveal" data-i18n="newsletter_title">Stay in the Loop</h2>
+            <p class="reveal reveal-delay-1" data-i18n="newsletter_desc">Subscribe to our newsletter for the latest
+                fashion updates, exclusive offers, and new collection previews.</p>
+            <div class="reveal reveal-delay-2"
+                style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:500px; margin:0 auto;">
+                <input type="email" placeholder="Enter your email address"
+                    style="flex:1; min-width:220px; padding:14px 18px; border-radius:4px; border:1px solid rgba(201,168,76,0.3); background:rgba(0,0,0,0.2); color:var(--color-ivory); font-family:var(--font-body); font-size:0.9rem; outline:none;"
+                    id="newsletterEmail">
+                <button class="btn btn-white" onclick="subscribeNewsletter()"
+                    data-i18n="subscribe_btn">Subscribe</button>
+            </div>
+            <p id="newsletterMsg"
+                style="color:var(--color-gold); margin-top:1rem; display:none; position:relative; z-index:1;"></p>
         </div>
     </section>
 
@@ -115,7 +92,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand"><a href="./" class="logo">
-                        <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+                        <img src="model photos/logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
                     </a>
                     <p>A fast growing clothing brand in Africa, specializing in the manufacturing of fashionable clothes
                         for the general public.</p>
@@ -177,13 +154,7 @@
                 class="close-icon">✕</span></button>
     </div>
 
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-close" id="lightboxClose">✕</div>
-        <img src="" alt="Gallery image" id="lightboxImg">
-    </div>
-
-    <script src="script.js"></script>
+    <script src="../backend/script.js"></script>
 </body>
 
 </html>
