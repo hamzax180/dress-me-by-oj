@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Dress Me by Oj</title>
+    <meta name="description"
+        content="Get in touch with Dress Me by Oj. Contact us for orders, inquiries, or partnerships. Phone: 0836982296, Email: Dressmeclothing@yahoo.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+                <a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html"
+                    class="active">Contact</a>
+            </nav>
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="ar">AR</button>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="page_contact_title">CONTACT</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><span>/</span><span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Info -->
+                <div class="contact-info reveal">
+                    <div>
+                        <span class="section-label" data-i18n="getintouch_label">Get in Touch</span>
+                        <h2 class="section-title" data-i18n="getintouch_title">Let's Start a Conversation</h2>
+                        <p data-i18n="getintouch_desc">Whether you have a question about our products, need a custom
+                            order, or want to explore wholesale opportunities, we're here to help. Reach out and our
+                            team will respond promptly.</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">📞</div>
+                        <div>
+                            <h4 data-i18n="phone_label">Phone</h4>
+                            <p><a href="tel:0836982296">0836982296</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">✉</div>
+                        <div>
+                            <h4 data-i18n="email_label">Email</h4>
+                            <p><a href="mailto:Dressmeclothing@yahoo.com">Dressmeclothing@yahoo.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">🌍</div>
+                        <div>
+                            <h4 data-i18n="location_label">Location</h4>
+                            <p data-i18n="location_value">Africa</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">🕐</div>
+                        <div>
+                            <h4 data-i18n="hours_label">Business Hours</h4>
+                            <p data-i18n="hours_value">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal reveal-delay-2">
+                    <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName" data-i18n="form_name">Your Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" data-i18n="form_email">Your Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="john@example.com"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject" data-i18n="form_subject">Subject</label>
+                            <input type="text" id="contactSubject" name="_subject" placeholder="How can we help you?">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone" data-i18n="form_phone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="+1 234 567 890">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" data-i18n="form_message">Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Tell us about your inquiry..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="form_submit">Send
+                            Message</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        ✓ Thank you for your message! We'll get back to you within 24 hours.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label" style="justify-content:center;" data-i18n="find_us_label">Find Us</span>
+                <h2 class="section-title" data-i18n="find_us_title">Our Location</h2>
+            </div>
+            <div class="map-container reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63423780.29269073!2d-13.485558499999999!3d-2.7846949999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1085e340585a9a1f%3A0xba0c82b989a6c344!2sAfrica!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label" style="justify-content:center;" data-i18n="faq_label">Common
+                    Questions</span>
+                <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width:700px; margin:3rem auto 0;">
+                <div class="testimonial-card reveal reveal-delay-1" style="margin-bottom:1rem; cursor:pointer;"
+                    onclick="this.querySelector('p').style.display = this.querySelector('p').style.display === 'none' ? 'block' : 'none'">
+                    <h4 style="display:flex; justify-content:space-between; align-items:center;" data-i18n="faq1_q">How
+                        can I place an order? <span style="color:var(--color-gold);">+</span></h4>
+                    <p style="display:none; margin-top:1rem;" data-i18n="faq1_a">You can place an order by contacting us
+                        via phone (0836982296), email (Dressmeclothing@yahoo.com), or by using the chat assistant on our
+                        website. We'll guide you through the ordering process.</p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2" style="margin-bottom:1rem; cursor:pointer;"
+                    onclick="this.querySelector('p').style.display = this.querySelector('p').style.display === 'none' ? 'block' : 'none'">
+                    <h4 style="display:flex; justify-content:space-between; align-items:center;" data-i18n="faq2_q">Do
+                        you offer international shipping? <span style="color:var(--color-gold);">+</span></h4>
+                    <p style="display:none; margin-top:1rem;" data-i18n="faq2_a">Yes! We ship to over 15 countries
+                        worldwide. Shipping costs and delivery times vary by location. Contact us for a quote based on
+                        your destination.</p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3" style="margin-bottom:1rem; cursor:pointer;"
+                    onclick="this.querySelector('p').style.display = this.querySelector('p').style.display === 'none' ? 'block' : 'none'">
+                    <h4 style="display:flex; justify-content:space-between; align-items:center;" data-i18n="faq3_q">Can
+                        I request custom designs? <span style="color:var(--color-gold);">+</span></h4>
+                    <p style="display:none; margin-top:1rem;" data-i18n="faq3_a">Absolutely! We specialize in bespoke
+                        tailoring. Share your ideas, preferred fabrics, and measurements, and our design team will
+                        create a one-of-a-kind piece just for you.</p>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-4" style="margin-bottom:1rem; cursor:pointer;"
+                    onclick="this.querySelector('p').style.display = this.querySelector('p').style.display === 'none' ? 'block' : 'none'">
+                    <h4 style="display:flex; justify-content:space-between; align-items:center;" data-i18n="faq4_q">What
+                        are your available sizes? <span style="color:var(--color-gold);">+</span></h4>
+                    <p style="display:none; margin-top:1rem;" data-i18n="faq4_a">We offer a wide range of sizes from XS
+                        to 4XL. For the best fit, we recommend our custom tailoring service where garments are made to
+                        your exact measurements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo">
+                        <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+                    </a>
+                    <p>A fast growing clothing brand in Africa, specializing in the manufacturing of fashionable clothes
+                        for the general public.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:0836982296">📞 0836982296</a></li>
+                        <li><a href="mailto:Dressmeclothing@yahoo.com">✉ Dressmeclothing@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dress Me by Oj. All rights reserved.</p>
+                <div class="footer-social"><a
+                        href="https://www.instagram.com/dressmeclothings?igsh=MWx2cjdlNmFvY2o4cw==" target="_blank"
+                        aria-label="Instagram">📷</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-avatar">🤖</div>
+                <div class="chat-header-info">
+                    <h4>Dress Me Assistant</h4>
+                    <p>Online – Ready to help</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">Hello! 👋 Welcome to Dress Me by Oj. How can I help you today?</div>
+            </div>
+            <div class="chat-quick-replies" id="quickReplies"><button class="quick-reply-btn"
+                    data-msg="What products do you offer?">Products</button><button class="quick-reply-btn"
+                    data-msg="How can I place an order?">Place an Order</button><button class="quick-reply-btn"
+                    data-msg="How to contact you?">Contact</button></div>
+            <div class="chat-input-area"><input type="text" class="chat-input" id="chatInput"
+                    placeholder="Type your message..."><button class="chat-send" id="chatSend">➤</button></div>
+        </div>
+        <button class="chat-toggle" id="chatToggle"><span class="chat-icon">💬</span><span
+                class="close-icon">✕</span></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

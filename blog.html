@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News – Dress Me by Oj</title>
+    <meta name="description"
+        content="Stay updated with the latest fashion news, trends, and stories from Dress Me by Oj.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+                <a href="gallery.html">Gallery</a><a href="blog.html" class="active">Blog</a><a
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="ar">AR</button>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="page_blog_title">LATEST NEWS</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><span>/</span><span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG POSTS -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- News Coming Soon -->
+                <div class="no-news-message" style="grid-column: 1 / -1; text-align: center; padding: 4rem 0;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem;">Coming Soon</h3>
+                    <p>We are working on exciting updates. Check back later for the latest news and fashion insights.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2 class="reveal" data-i18n="newsletter_title">Stay in the Loop</h2>
+            <p class="reveal reveal-delay-1" data-i18n="newsletter_desc">Subscribe to our newsletter for the latest
+                fashion updates, exclusive offers, and new collection previews.</p>
+            <div class="reveal reveal-delay-2"
+                style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:500px; margin:0 auto;">
+                <input type="email" placeholder="Enter your email address"
+                    style="flex:1; min-width:220px; padding:14px 18px; border-radius:4px; border:1px solid rgba(201,168,76,0.3); background:rgba(0,0,0,0.2); color:var(--color-ivory); font-family:var(--font-body); font-size:0.9rem; outline:none;"
+                    id="newsletterEmail">
+                <button class="btn btn-white" onclick="subscribeNewsletter()"
+                    data-i18n="subscribe_btn">Subscribe</button>
+            </div>
+            <p id="newsletterMsg"
+                style="color:var(--color-gold); margin-top:1rem; display:none; position:relative; z-index:1;"></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo">
+                        <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+                    </a>
+                    <p>A fast growing clothing brand in Africa, specializing in the manufacturing of fashionable clothes
+                        for the general public.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:0836982296">📞 0836982296</a></li>
+                        <li><a href="mailto:Dressmeclothing@yahoo.com">✉ Dressmeclothing@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dress Me by Oj. All rights reserved.</p>
+                <div class="footer-social"><a
+                        href="https://www.instagram.com/dressmeclothings?igsh=MWx2cjdlNmFvY2o4cw==" target="_blank"
+                        aria-label="Instagram">📷</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-avatar">🤖</div>
+                <div class="chat-header-info">
+                    <h4>Dress Me Assistant</h4>
+                    <p>Online – Ready to help</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">Hello! 👋 Welcome to Dress Me by Oj. How can I help you today?</div>
+            </div>
+            <div class="chat-quick-replies" id="quickReplies"><button class="quick-reply-btn"
+                    data-msg="What products do you offer?">Products</button><button class="quick-reply-btn"
+                    data-msg="How can I place an order?">Place an Order</button><button class="quick-reply-btn"
+                    data-msg="How to contact you?">Contact</button></div>
+            <div class="chat-input-area"><input type="text" class="chat-input" id="chatInput"
+                    placeholder="Type your message..."><button class="chat-send" id="chatSend">➤</button></div>
+        </div>
+        <button class="chat-toggle" id="chatToggle"><span class="chat-icon">💬</span><span
+                class="close-icon">✕</span></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

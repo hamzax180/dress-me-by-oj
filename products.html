@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products – Dress Me by Oj</title>
+    <meta name="description"
+        content="Explore our premium clothing collections. From evening wear to casual fashion, discover the latest designs from Dress Me by Oj.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="ar">AR</button>
+            </div>
+            <!-- Cart Toggle -->
+            <!-- Cart Toggle Removed -->
+            <!-- <div class="cart-toggle" onclick="toggleCart()">
+                🛒 <span class="cart-count">0</span>
+            </div> -->
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="page_products_title">NEW COLLECTION</h1>
+            <div class="breadcrumb">
+                <a href="index.html" data-i18n="nav_home">Home</a><span>/</span><span
+                    data-i18n="nav_products">Matches</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FEATURED PRODUCTS -->
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" id="featured">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title" data-i18n="bestsellers_title">New Drop</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card reveal reveal-delay-1">
+                    <img src="white-tank-top.jpeg" alt="White Tank Top - Dress Me" class="product-card-img"
+                        style="object-fit: contain; padding: 1rem; background: #ffffff; filter: contrast(1.05);">
+                    <div class="product-card-details">
+                        <h3 data-i18n="prod_white_tank">White Tank "Dress Me"</h3>
+                        <p data-i18n="prod_white_tank_desc">Signature Script Logo</p>
+                        <p class="price">$30.00</p>
+                    </div>
+                    <!-- <button class="add-to-cart-btn"
+                        onclick="addToCart('white-tank', 'White Tank Dress Me', 30, 'white-tank-top.jpeg')">ADD TO
+                        CART</button> -->
+                </div>
+                <!-- Product 2: Black Tank -->
+                <div class="product-card reveal reveal-delay-2">
+                    <img src="black-tank-top.jpeg" alt="Black Tank Top - Dress Me" class="product-card-img"
+                        style="object-fit: contain; padding: 1rem; background: #ffffff;">
+                    <div class="product-card-details">
+                        <h3 data-i18n="prod_black_tank">Black Tank "Dress Me"</h3>
+                        <p data-i18n="prod_black_tank_desc">Signature Script Logo</p>
+                        <p class="product-price">$30.00</p>
+                    </div>
+                    <!-- <button class="add-to-cart-btn"
+                        onclick="addToCart('black-tank', 'Black Tank Dress Me', 30, 'black-tank-top.jpeg')">ADD TO
+                        CART</button> -->
+                </div>
+                <!-- Product 3: Long Sleeve -->
+                <div class="product-card reveal reveal-delay-3">
+                    <img src="long-sleeve.jpeg" alt="Layered Long Sleeve - DM" class="product-card-img"
+                        style="object-fit: contain; padding: 1rem; background: #ffffff;">
+                    <div class="product-card-details">
+                        <h3 data-i18n="prod_black_long">Black Long Sleeve "Dress Me"</h3>
+                        <p data-i18n="prod_black_long_desc">Signature Circle Logo</p>
+                        <p class="product-price">$45.00</p>
+                    </div>
+                    <!-- <button class="add-to-cart-btn"
+                        onclick="addToCart('long-sleeve', 'Layered Long Sleeve DM', 45, 'long-sleeve.jpeg')">ADD TO
+                        CART</button> -->
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <!-- Replaced 'View All' with Cart Button for now, or just remove it -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CART DRAWER -->
+    <!-- CART DRAWER REMOVED -->
+    <!-- <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="text-align:center; margin-top:2rem; color:#888;">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div> -->
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2 class="reveal" data-i18n="products_cta_title">Need a Custom Order?</h2>
+            <p class="reveal reveal-delay-1" data-i18n="products_cta_desc">Contact us for bespoke tailoring, wholesale
+                inquiries, or to discuss your fashion needs.</p>
+            <a href="contact.html" class="btn btn-white reveal reveal-delay-2" data-i18n="cta_btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="logo-new.jpeg" alt="Dress Me by Oj" class="logo-img">
+                    </a>
+                    <p data-i18n="footer_desc">A fast growing clothing brand in Africa, specializing in the
+                        manufacturing of fashionable clothes for the general public.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_pages">Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_company">Company</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog & News</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact">Contact</h4>
+                    <ul>
+                        <li><a href="tel:0836982296">📞 0836982296</a></li>
+                        <li><a href="mailto:Dressmeclothing@yahoo.com">✉ Dressmeclothing@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dress Me by Oj. All rights reserved.</p>
+                <div class="footer-social"><a
+                        href="https://www.instagram.com/dressmeclothings?igsh=MWx2cjdlNmFvY2o4cw==" target="_blank"
+                        aria-label="Instagram">📷</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-avatar">🤖</div>
+                <div class="chat-header-info">
+                    <h4>Dress Me Assistant</h4>
+                    <p>Online – Ready to help</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">Hello! 👋 Welcome to Dress Me by Oj. How can I help you today?</div>
+            </div>
+            <div class="chat-quick-replies" id="quickReplies"><button class="quick-reply-btn"
+                    data-msg="What products do you offer?">Products</button><button class="quick-reply-btn"
+                    data-msg="How can I place an order?">Place an Order</button><button class="quick-reply-btn"
+                    data-msg="How to contact you?">Contact</button></div>
+            <div class="chat-input-area"><input type="text" class="chat-input" id="chatInput"
+                    placeholder="Type your message..."><button class="chat-send" id="chatSend">➤</button></div>
+        </div>
+        <button class="chat-toggle" id="chatToggle"><span class="chat-icon">💬</span><span
+                class="close-icon">✕</span></button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
