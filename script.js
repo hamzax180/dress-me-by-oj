@@ -364,9 +364,11 @@ function getBotResponse(input) {
 }
 
 /* ---------- Contact Form ---------- */
+/* ---------- Contact Form with Custom Validation ---------- */
 function handleContactSubmit(e) {
   e.preventDefault();
 
+  const form = document.getElementById('contactForm');
   const name = document.getElementById('contactName');
   const email = document.getElementById('contactEmail');
   const message = document.getElementById('contactMessage');
@@ -375,16 +377,33 @@ function handleContactSubmit(e) {
 
   if (!name || !email || !message) return;
 
-  // Basic validation
-  if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-    alert('Please fill in all required fields.');
-    return;
+  // Clear previous errors
+  clearErrors(form);
+
+  let isValid = true;
+
+  // Validate Name
+  if (!name.value.trim()) {
+    showError(name, 'Please enter your name.');
+    isValid = false;
   }
 
-  if (!isValidEmail(email.value)) {
-    alert('Please enter a valid email address.');
-    return;
+  // Validate Email
+  if (!email.value.trim()) {
+    showError(email, 'Please enter your email address.');
+    isValid = false;
+  } else if (!isValidEmail(email.value)) {
+    showError(email, 'Please enter a valid email address.');
+    isValid = false;
   }
+
+  // Validate Message
+  if (!message.value.trim()) {
+    showError(message, 'Please enter a message.');
+    isValid = false;
+  }
+
+  if (!isValid) return;
 
   // Show sending state
   const btn = e.target.querySelector('button[type="submit"]');
@@ -410,7 +429,6 @@ function handleContactSubmit(e) {
     .then(response => response.json())
     .then(data => {
       // Show success
-      const form = document.getElementById('contactForm');
       const success = document.getElementById('formSuccess');
       if (form) form.style.display = 'none';
       if (success) success.classList.add('visible');
@@ -420,6 +438,7 @@ function handleContactSubmit(e) {
         if (form) {
           form.style.display = 'flex';
           form.reset();
+          clearErrors(form); // Ensure errors are cleared on reset
         }
         if (success) success.classList.remove('visible');
         btn.innerText = originalText;
@@ -428,10 +447,50 @@ function handleContactSubmit(e) {
     })
     .catch(error => {
       console.error('Error:', error);
-      alert('There was a problem sending your message. Please try again.');
+      // Show error on the form generally or specific field if known, here we use a general alert fallback or custom modal. 
+      // For consistency with "no alerts", we can show a temporary error message in the form button or a dedicated error div.
+      // Used alert as last resort fallback for network errors, but let's try to add a message below button.
+      const errorDiv = document.createElement('div');
+      errorDiv.className = 'error-message';
+      errorDiv.style.justifyContent = 'center';
+      errorDiv.style.marginTop = '10px';
+      errorDiv.textContent = 'Network error. Please try again.';
+      form.appendChild(errorDiv);
+      setTimeout(() => errorDiv.remove(), 4000);
+
       btn.innerText = originalText;
       btn.disabled = false;
     });
+}
+
+function showError(input, message) {
+  const formGroup = input.parentElement;
+
+  // Add error class to input
+  input.classList.add('error');
+
+  // Create or update error message
+  let errorDisplay = formGroup.querySelector('.error-message');
+  if (!errorDisplay) {
+    errorDisplay = document.createElement('div');
+    errorDisplay.className = 'error-message';
+    formGroup.appendChild(errorDisplay);
+  }
+  errorDisplay.innerText = message;
+
+  // Add listener to clear error on input
+  input.addEventListener('input', function () {
+    input.classList.remove('error');
+    if (errorDisplay) errorDisplay.remove();
+  }, { once: true });
+}
+
+function clearErrors(form) {
+  const inputs = form.querySelectorAll('.error');
+  inputs.forEach(input => input.classList.remove('error'));
+
+  const messages = form.querySelectorAll('.error-message');
+  messages.forEach(msg => msg.remove());
 }
 
 function isValidEmail(email) {

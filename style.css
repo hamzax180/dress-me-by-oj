@@ -2872,3 +2872,70 @@ p {
   gap: 2rem;
   margin-top: 3rem;
 }
+
+/* ---------- Custom Form Validation ---------- */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  /* Ensure space for error message */
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #D93025 !important;
+  /* Standard error red */
+  animation: shake 0.4s ease-in-out;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #D93025;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 6px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.error-message::before {
+  content: '⚠️';
+  /* Simple icon */
+  font-size: 0.9rem;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
