@@ -438,9 +438,15 @@ p {
   z-index: 1100;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  align-items: flex-start;
+  /* Left align items */
+  justify-content: flex-start;
+  /* Start from top */
+  padding-top: 140px;
+  /* Clear header */
+  padding-left: 2rem;
+  /* Left indentation */
+  gap: 1.5rem;
 }
 
 .mobile-nav.open {
@@ -450,13 +456,14 @@ p {
 .mobile-nav a {
   font-family: var(--font-body);
   /* Use body font for cleaner look */
-  font-size: 1.5rem;
-  /* Slightly smaller for cleaner list */
+  font-size: 1.2rem;
+  /* Smaller for list view */
   color: var(--color-ivory);
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   transition: var(--transition);
   text-transform: none;
+  text-align: left;
   /* Remove uppercase if present elsewhere */
 }
 
@@ -468,6 +475,9 @@ p {
   display: flex;
   gap: 15px;
   margin-top: 2rem;
+  justify-content: flex-start;
+  /* Align left */
+  width: 100%;
 }
 
 .mobile-lang-switcher .lang-btn {
