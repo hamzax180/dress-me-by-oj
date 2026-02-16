@@ -563,20 +563,27 @@ p {
 @media (max-width: 968px) {
   .hero .container {
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    /* Align to top instead of center to control spacing better */
+    padding-top: 80px;
+    /* Add padding for fixed header */
+    gap: 2rem;
   }
 
   .hero-content {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    order: 2;
+    /* Text comes second */
   }
 
   .hero-image-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    order: 1;
+    /* Image comes first */
   }
 
   .hero-model-img {
