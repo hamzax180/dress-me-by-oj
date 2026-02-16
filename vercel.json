@@ -7,6 +7,10 @@
       "destination": "/backend/:path*"
     },
     {
+      "source": "/frontend/:path*",
+      "destination": "/frontend/:path*"
+    },
+    {
       "source": "/",
       "destination": "/frontend/index.html"
     },
