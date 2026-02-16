@@ -589,6 +589,16 @@ p {
 }
 
 @media (max-width: 968px) {
+  .hero {
+    height: auto;
+    /* Allow content to grow */
+    min-height: 100vh;
+    overflow: visible;
+    /* Ensure nothing is clipped */
+    padding-bottom: 2rem;
+    /* Add breathing room at bottom */
+  }
+
   .hero .container {
     flex-direction: column;
     justify-content: flex-start;
@@ -596,6 +606,21 @@ p {
     padding-top: 120px;
     /* Add padding for fixed header */
     gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mobile-nav a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle separator */
+    padding-bottom: 1rem;
+    /* Space for separator */
+    width: 100%;
+    /* Full width for border */
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+    /* No border for last item */
   }
 
   .hero-content {
